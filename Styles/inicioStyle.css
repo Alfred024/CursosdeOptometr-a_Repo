@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    color: white;
+}
+:root{
+    --standard-golden: #eac82f;
+}
+
+.mainNav{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+    height: 140px;
+    align-items: center;
+}
+.mainNav img{
+    width: 20rem;
+    margin-left: 10rem;
+}
+.navItemsContainer {
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    list-style: none;
+}
+.navItemsContainer a:hover {
+    transition: 0.5s;
+    font-weight: 700;
+    color: whitesmoke;
+}
+.navItemsContainer li {
+    color: var(--standard-golden);
+    font-size: 1.4rem;
+    padding: 1rem 1.2rem;
+}
