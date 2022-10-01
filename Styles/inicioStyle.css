@@ -12,6 +12,8 @@ html{
     --darker-golden: #ceae23;
 }
 
+
+/* PARTE DEL HEADER */
 .menu-icon{
     display: none;
 }
@@ -73,3 +75,8 @@ html{
     }
 }
 
+/* PARTE DEL MAIN CONTENT*/
+
+main{
+    background-image: url(/Imgs/fondoDeMain.jpg);
+}
