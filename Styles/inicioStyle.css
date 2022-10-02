@@ -6,11 +6,13 @@
 html{
     font-size: 62.5%;
     color: white;
+    overflow-x: hidden;
 }
 :root{
     --standard-golden: #eac82f;
     --darker-golden: #ceae23;
     --neutral-orange:#f6be45;
+    --black-background: #393837;
 }
 
 
@@ -50,12 +52,10 @@ html{
     font-weight: 700;
 }
 
+/* PARTE DEL .mainContent CONTENT*/
 
-
-
-/* PARTE DEL MAIN CONTENT*/
-
-main{
+.mainContent {
+    background-color: whitesmoke;
     background-image: url(/Imgs/fondoDeMain.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -79,19 +79,16 @@ main{
 }
 .mainPart1 p{
     font-size: 1.7rem;
+
 }
-/* .mainPart2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 .mainPart2{
     display: flex;
     flex-direction: column;
     justify-content: center;
     place-items: center;
+    margin-bottom: 10rem;
 }
-.mainPart2 button{
+.mainContent .mainPart2 button{
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -99,7 +96,7 @@ main{
 .mainPart2 .text-container{
     background-color: whitesmoke;
     margin: 3rem 15rem;
-    padding: 1rem 6rem;
+    padding: 8rem 2.5rem;
     border-radius: 2rem;
 }
 .mainPart2 h1{
@@ -110,7 +107,7 @@ main{
     font-size: 3rem;
     color: black;
 }
-main button{
+.mainContent button{
     margin-right: 28rem;
     margin-top: 10rem;
     padding: 1.5rem 3.5rem;
@@ -118,18 +115,50 @@ main button{
     font-size: 1.5;
     background-color: var(--neutral-orange);
 }
-main button:hover{
+.mainContent button:hover{
     background-color: #d1941a;
 }
-main button a{
+.mainContent button a{
     text-decoration: none;
     font-weight: 600;
     color: white;
 }
-/* .buttonMain2{
-    position: absolute;
-} */
 
+/* Estilos del Slider */
+
+.box-slider{
+    display: flex;
+    gap: 50px;
+    height: 315px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    /* scroll-snap-type: proximity; */
+}
+
+.box-card{
+    position: relative;
+    scroll-snap-align: x center;
+    width: 100%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px auto 0;
+    padding: 0 15px;
+    background-color: var(--black-background);
+   
+    box-shadow: 0 4px 8px rgba(89,73,30,0.16);
+}
+
+.box-card-title{
+    position: absolute;
+    top: -27.3px;
+    left: calc(50% - 60px);
+    font-size: 1.2rem;
+    background-color: #393837;
+    color: var(--darker-golden);
+    padding: 6px;
+}
 
 
 @media (max-width: 900px) {
@@ -161,11 +190,14 @@ main button a{
         display: block;
     }
 
-    /* Media queries Main parte 1 */
+    /* Media queries .mainContent parte 1 */
     .mainPart1 .mainTitle{
         font-size: 4.5rem;
     }
     .mainPart1 button{
         margin-right: 0rem;
+    }
+    .mainPart2 .text-container{
+        width: 100vw;
     }
 }
