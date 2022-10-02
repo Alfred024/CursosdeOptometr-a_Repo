@@ -58,12 +58,18 @@ html{
 main{
     background-image: url(/Imgs/fondoDeMain.jpg);
     background-position: center;
-    height: 800px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
 }
 .mainPart1{
     padding: 15rem 3rem;
     display: flex;
-    place-items: center;
+    place-items: start;
     flex-direction: column;
     color: black;
 }
@@ -74,7 +80,37 @@ main{
 .mainPart1 p{
     font-size: 1.7rem;
 }
-.mainPart1 button{
+/* .mainPart2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+.mainPart2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+.mainPart2 button{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+.mainPart2 .text-container{
+    background-color: whitesmoke;
+    margin: 3rem 15rem;
+    padding: 1rem 6rem;
+    border-radius: 2rem;
+}
+.mainPart2 h1{
+    font-size: 5rem;
+    color: var(--darker-golden);
+}
+.mainPart2 p{
+    font-size: 3rem;
+    color: black;
+}
+main button{
     margin-right: 28rem;
     margin-top: 10rem;
     padding: 1.5rem 3.5rem;
@@ -82,20 +118,26 @@ main{
     font-size: 1.5;
     background-color: var(--neutral-orange);
 }
-.mainPart1 button:hover{
+main button:hover{
     background-color: #d1941a;
 }
-.mainPart1 button a{
+main button a{
     text-decoration: none;
     font-weight: 600;
     color: white;
 }
+/* .buttonMain2{
+    position: absolute;
+} */
 
 
 
 @media (max-width: 900px) {
 
     /* Media queris HEADER/NAV */
+    .mainPart1{
+        place-items: center;
+    }
     .imgs-container{
         display: flex;
         justify-content: center;
