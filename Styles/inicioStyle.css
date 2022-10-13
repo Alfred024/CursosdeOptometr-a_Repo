@@ -58,7 +58,7 @@ html{
     background-color: whitesmoke;
     background-image: url(/Imgs/fondoDeMain.jpg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-rpeat;
     box-sizing: border-box;
     height: fit-content;
     display: flex;
@@ -126,14 +126,43 @@ html{
 
 /* Estilos del Slider */
 
-.box-slider{
+.slider{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: fit-content;
+}
+.slider .cards{
+    padding: 0rem 1rem;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+.slider .cards p{
+    padding: 1rem;
+}
+.slider .cards-title{
+    
+    position: absolute;
+    color: var(--darker-golden);
+    /* margin-left: auto;
+    margin-right:auto ; */
+    background-color: whitesmoke;
+    padding: 0.5rem 0.7rem;
+    /* width: 40%; */
+}
+.slider .cards-text{
+    margin-top: 3rem;
+    background-color: #393837;
+}
+/* .box-slider{
     display: flex;
     gap: 50px;
     height: 315px;
     overflow-y: hidden;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
-    /* scroll-snap-type: proximity; */
+    scroll-snap-type: proximity;
 }
 
 .box-card{
@@ -158,7 +187,7 @@ html{
     background-color: #393837;
     color: var(--darker-golden);
     padding: 6px;
-}
+} */
 
 
 @media (max-width: 900px) {

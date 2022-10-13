@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        *:root{
+            --standard-golden: #eac82f;
+            --darker-golden: #ceae23;
+            --neutral-orange:#f6be45;
+            --black-background: #2d2d2b;
+        }
+        .navBar i{
+            display: none;
+            color: var(--darker-golden);
+        }
+        .navBar .icon{
+            display: none;
+        }
+        .navBar{
+            background-color: var(--black-background);
+            background-color: black;
+            display: grid;
+            grid-template-columns: min-content auto;
+        }
+        
+        .navBar .list-Container{
+            display: flex;
+            justify-content: end;
+            place-items: center;
+        }
+        .navBar .list-Container a{
+            font-size: 14px;
+            font-weight: 600;
+            border: solid var(--darker-golden) 1px;
+            border-radius: 20px;
+            background: -webkit-linear-gradient(#8d7611, #fff0ab);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            padding: 5px 9px;
+            margin: 0px 5px;
+        }
+
+        /* MEDUA QUERISE 765PX */
+        @media screen and (max-width: 770px) {
+            .navBar{
+                justify-content: center;
+                align-items: center;
+            }
+            .navBar .icon{
+                display: block;
+            }
+            .navBar i{
+                display: block;
+                padding-left: 15px;
+                
+                position: absolute;
+                margin-right: 0;
+            }
+            /* .navBar i:hover{
+                background-color: var(--darker-golden);
+            } */
+            .navBar .list-Container{
+                display: none;
+            }
+        } 
+
+        @media screen and (max-width: 770px) {
+            .navBarresponsive .list-Container{
+            width: 100vw;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            background-color: rgb(41, 41, 41);
+            }
+            .navBarresponsive .logo-container{
+            display: none;
+            }
+            .navBarresponsive a{
+            font-weight: 100;
+            display: flex;
+            place-content: center;
+            width: 100vw;
+            padding: 10px;
+            border-bottom: solid var(--darker-golden) 1px;
+            color: white;
+            text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        
+        <nav class="navBar" id="responsiveNav">
+            <!-- <a href="javascript:void(0);" class="icon" onclick="displayMenu()"></a> -->
+            <i class="fa fa-bars" onclick="displayMenu()"></i>
+
+            <div class="logo-container">
+                <img src="./Icons/LogoMain.png" alt="Logo de la empresa">
+            </div>
+
+            <div class="list-Container">
+                    <a href="">
+                        <span class="">Inicio</span>
+                    </a>
+                    <a href="">
+                        <span class="">Coaching</span>
+                    </a>
+                    <a href="">
+                        <span class="">Historias de exito</span>
+                    </a>
+                    <a href="">
+                        <span class="">Cursos</span>
+                    </a>
+                    <a href="">
+                        <span class="">Certificados</span>
+                    </a>
+                    <a href="">
+                        <span class="">Rodcoast</span>
+                    </a>
+                    <a href="">
+                        <span class="">Contáctame</span>
+                    </a>
+            </div>
+
+            
+        </nav>
+    </header>
+
+    <script>
+        function displayMenu() {
+          var x = document.getElementById("responsiveNav");
+          if (x.className === "navBar") {
+            x.className += "responsive";
+          } else {
+            x.className = "navBar";
+          }
+        }
+    </script> 
+</body>
+</html>

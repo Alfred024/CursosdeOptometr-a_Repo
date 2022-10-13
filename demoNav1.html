@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final NavBar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        *:root{
+            --standard-golden: #eac82f;
+            --darker-golden: #ceae23;
+            --neutral-orange:#f6be45;
+            --black-background: #393937;
+        }
+        .topnav {
+            display: flex;
+            place-items: center;
+            justify-content: space-between;
+            background-color: rgb(41, 41, 41);
+            padding: 0px 10px;
+        }
+        .topnav .mainLogo2{
+          display: none;
+        }
+        .topnav i{
+            color: var(--darker-golden);
+          }
+        .topnav a {
+          border-radius: 20px;
+          border-style: solid var(--darker-golden) 1px;
+          float: left;
+          display: block;
+          color: black;
+          background-color: var(--darker-golden);
+          padding: 5px 10px;
+          text-decoration: none;
+          font-size: 0.9rem;
+        }
+        
+        .topnav a:hover {
+          transition: 0.8s;
+          padding: 15px 15px;
+          background-color: var(--darker-golden);
+          color: black;
+        }
+        
+        .topnav .icon {
+          display: none;
+        }
+        
+        /* Antes del click */
+        /* @media screen and (max-width: 700px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        } */
+        @media screen and (max-width: 700px) {
+          .topnav a:hover i{
+            color: black;
+          }
+          .topnav a:not(:first-child) {display: none;}
+          .topnav .mainLogo{display: none;}
+          .topnav .mainLogo2{
+            display: block;
+          margin-left: auto;
+          margin-right: auto;}
+          .topnav a{
+            background-color: rgb(41, 41, 41);;
+          }
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        } 
+
+        /* Cuando haces click, utiliza la calse responsive */
+        @media screen and (max-width: 700px) {
+          .topnavresponsive {
+            width: 100vw;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            background-color: rgb(41, 41, 41);
+          }
+          .topnavresponsive img{
+            display: none;
+          }
+          .topnavresponsive a{
+            font-weight: 100;
+            display: flex;
+            place-content: center;
+            width: 100vw;
+            padding: 10px;
+            border-bottom: solid var(--darker-golden) 1px;
+            color: white;
+            text-decoration: none;
+          }
+          .topnavresponsive a:hover{
+            background-color: black;
+            color: var(--darker-golden);
+            text-decoration: none;
+          }
+        }
+        </style>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <!-- <a href="#home" class="active">Logo de la empresa</a> -->
+        <img class="mainLogo" src="./Imgs/LogoMain.png" alt="Logo de la empresa">
+         
+            <a href="">
+                <span class="span-name">Inicio</span>
+            </a>
+            <a href="">
+                <span class="span-name">Coaching</span>
+            </a>
+            <a href="">
+                <span class="span-name">Historias de exito</span>
+            </a>
+            <a href="">
+                <span class="span-name">Cursos</span>
+            </a>
+            <a href="">
+                <span class="span-name">Certificados</span>
+            </a>
+            <a href="">
+                <span class="span-name">Rodcoast</span>
+            </a>
+            <a href="">
+                <span class="span-name">Contáctame</span>
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="displayMenu()">
+            <i class="fa fa-bars"></i>
+            <!-- <img src="./Icons/menu-regular-24.png" alt=""> -->
+            </a>
+
+            <img class="mainLogo2" src="./Imgs/LogoMain.png" alt="Logo de la empresa">
+    </div>
+      
+      <script>
+      function displayMenu() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += "responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>    
+</body>
+</html>

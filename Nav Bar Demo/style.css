@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+*:root{
+    --standard-golden: #eac82f;
+    --darker-golden: #ceae23;
+    --neutral-orange:#f6be45;
+    --black-background: #2d2d2b;
+}
+.navBar{
+    background-color: var(--black-background);
+    background-color: black;
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+.navBar i{
+    display: none;
+    color: var(--darker-golden);
+}
+.navBar .list-Container{
+    display: flex;
+    justify-content: end;
+    place-items: center;
+}
+.navBar .list-Container a{
+    font-size: 14px;
+    font-weight: 600;
+    border: solid var(--darker-golden) 1px;
+    border-radius: 20px;
+    background: -webkit-linear-gradient(#8d7611, #fff0ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    padding: 5px 9px;
+    margin: 0px 5px;
+}
+
+/* MEDUA QUERISE 765PX */
+@media screen and (max-width: 770px) {
+    .navBar{
+        justify-content: center;
+        align-items: center;
+    }
+    .navBar i{
+        display: block;
+        padding-left: 15px;
+        
+        position: absolute;
+        margin-right: 0;
+    }
+    .navBar .list-Container{
+        display: none;
+    }
+  } 
+
+  @media screen and (max-width: 770px) {
+    .navBarresponsive .list-Container{
+      width: 100vw;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+      background-color: rgb(41, 41, 41);
+    }
+    .navBarresponsive .logo-container{
+      display: none;
+    }
+    .navBarresponsive a{
+      font-weight: 100;
+      display: flex;
+      place-content: center;
+      width: 100vw;
+      padding: 10px;
+      border-bottom: solid var(--darker-golden) 1px;
+      color: white;
+      text-decoration: none;
+    }
+  }
